@@ -1,0 +1,24 @@
+{
+  "name": "Node-Word-Guess",
+  "version": "1.0.0",
+  "description": "Uses constructor functions to make a command line version of Hangman",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ser-dialest/Node-Word-Guess.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ser-dialest/Node-Word-Guess/issues"
+  },
+  "homepage": "https://github.com/ser-dialest/Node-Word-Guess#readme",
+  "dependencies": {
+    "inquirer": "^6.2.2",
+    "prompt": "^1.0.0"
+  }
+}
