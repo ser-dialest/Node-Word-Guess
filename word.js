@@ -1,7 +1,9 @@
 var Letter = require("./letter");
+var clc = require("cli-color");
 
 function Word(word) {
     this.word = [];
+    this.misses = 10;
     for (var i = 0; i < word.length; i++) {
         this.word.push(new Letter(word[i]));
     }
@@ -9,11 +11,25 @@ function Word(word) {
         for (var i = 0; i < this.word.length; i++) {
             this.word[i].display();
         }
-        process.stdout.write("\n");
+        console.log();
+        console.log();
     }
-    this.guess = function(guess) {
+    this.check = function(guess) {
+        var correct = false;
         for (var i = 0; i < this.word.length; i++) {
-            this.word[i].check(guess);
+            if (this.word[i].check(guess)) {
+                correct = true;
+            };
+        }
+        if (correct) {
+            console.log(clc.green("CORRECT!!!"));
+            console.log();
+        }
+        else {
+            console.log(clc.red("INCORRECT!!!"));
+            console.log();
+            this.misses--;
+            console.log(this.misses + " guesses remaining!!!");
         }
     }
 };

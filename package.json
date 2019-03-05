@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ser-dialest/Node-Word-Guess#readme",
   "dependencies": {
+    "cli-color": "^1.4.0",
     "inquirer": "^6.2.2",
     "prompt": "^1.0.0"
   }
